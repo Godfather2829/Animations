@@ -1,0 +1,174 @@
+/*body {
+  background: lightblue;
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.circle {
+  width: 100px;
+  padding: 50px 0;
+  line-height: 0;
+  margin: 60px auto;
+  background: burlywood;
+  color: chocolate;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 2s, transform 0.5s 1s ease-in;
+}
+/* first number is transistion, 2nd is delay
+
+.circle:hover {
+  background: crimson;
+  color: aqua;
+  transform: rotate(360deg);
+}*/
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  height: 2%;
+  font-size: 25px;
+}
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+
+.sky {
+  height: 40%;
+  background: skyblue;
+}
+
+.grass {
+  height: 30%;
+  background: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.line {
+  box-sizing: border-box;
+  border: 2px dashed white;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 55%;
+}
+
+.luigi {
+  position: absolute;
+  top: -60px;
+  left: 0px;
+  animation-name: drive;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.6, 0.01, 0.49, 0.99);
+}
+
+.jai {
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+  animation-name: drive2;
+  animation-duration: 6s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
+  animation-timing-function: linear;
+}
+
+.mario {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  animation: drive 8s both infinite linear, jump 0.3s 5.8s infinite ease;
+}
+/*https://cubic-bezier.com/*/
+
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 90s linear infinite reverse;
+}
+
+.cloud:nth-child(2) {
+  width: 300px;
+  top: 0;
+  animation: wind 40s linear infinite reverse;
+}
+
+@keyframes drive {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(2650px);
+  }
+}
+
+@keyframes drive2 {
+  from {
+    transform: translateX(-200px);
+  }
+
+  to {
+    transform: translateX(2450px);
+  }
+}
+
+@keyframes drive3 {
+  from {
+    transform: translateX(-200px);
+  }
+
+  to {
+    transform: translateX(2300px);
+  }
+}
+
+@keyframes wind {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 40px;
+  }
+  50% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 40px;
+  }
+}
